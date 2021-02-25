@@ -100,7 +100,8 @@ def play(word):
       guess = input("Please guess a word or a letter: ").upper()
       if len(guess) == 1 and guess.isalpha():
          if guess in guessed_letters:
-               print('Already gessed the letter', guess)
+               print(Fore.YELLOW+'Already guessed the letter', guess)
+               print(Style.RESET_ALL)
          elif guess not in word:
                print(Fore.RED)
                print(guess, "is not in the word!")
@@ -123,7 +124,8 @@ def play(word):
 
       elif len(guess) == len(word) and guess.isalnum():
          if guess in guessed_words:
-               print("You already guessed the word", guess)
+               print(Fore.YELLOW+"You already guessed the word", guess)
+               print(Style.RESET_ALL) 
          elif guess != word:
                print(Fore.RED)
                print(guess, "is not the word")
@@ -142,7 +144,8 @@ def play(word):
    if guessed:
       print("Congrats you guessed the word, you WIN!")
    else:
-      print(f"Sorry you ran out of tries {word}. May be Next time")
+      print(Fore.RED+f"Sorry you ran out of tries {word}. May be Next time")
+      print(Style.RESET_ALL)
 
 def option():
    print(
@@ -173,7 +176,7 @@ def option():
 
       Developed by:
       1.Abhineet Saha
-      2.Antar Mukarjee
+      2.Antar Mukhopadhyaya
       3.Shiladitya Das
 
       in guidance of Govind Prasad Arya
@@ -183,7 +186,8 @@ def option():
    elif ops==4:
       print("exit")
    else:
-      print("invalid choice")
+      print(Fore.RED+"Invalid Choice")
+      print(Style.RESET_ALL)
       input("press any key")
       option()
 
