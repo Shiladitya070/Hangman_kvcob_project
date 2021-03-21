@@ -1,7 +1,9 @@
 from words import word_list
-from colorama import Fore, Back, Style 
+from colorama import Fore, Back, Style,init
 import random
 
+
+init()
 
 def get_word():
     word = random.choice(word_list)
